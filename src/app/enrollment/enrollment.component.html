@@ -1,5 +1,9 @@
 <p>Enrollment</p>
 <div>
-  <button mat-button color="primary">Upload picture</button>
-  <button mat-button color="primary">Take picture</button>
+  <input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+  <button mat-button color="primary" (click)="fileInput.click()">Select picture</button>
+  <button mat-button color="primary" (click)="onUpload()">Upload!</button>
 </div>

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { EnrollmentComponent } from './enrollment/enrollment.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: 'menu', component: MenuComponent},
       {path: 'enrollment', component: EnrollmentComponent},
