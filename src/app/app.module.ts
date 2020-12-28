@@ -8,6 +8,10 @@ import { RouterModule } from '@angular/router';
 import { EnrollmentComponent } from './enrollment/enrollment.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GrpcCoreModule } from '@ngx-grpc/core';
+import { GrpcWebClientModule } from '@ngx-grpc/grpc-web-client';
+import { GrpcMessage } from '@ngx-grpc/common';
+import { GrpcLoggerModule } from '@ngx-grpc/core';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,16 @@ import { HttpClientModule } from '@angular/common/http';
       {path: 'authentication', component: AuthenticationComponent},
       {path: '', redirectTo: '/menu', pathMatch: 'full'},
     ]),
+    GrpcCoreModule.forRoot(),
+    GrpcWebClientModule.forRoot({
+      settings: { host: 'http://localhost:8080', withCredentials: false},
+    }),
+    GrpcLoggerModule.forRoot({
+      settings: {
+        requestMapper: (msg: GrpcMessage) => msg.toProtobufJSON(),
+        responseMapper: (msg: GrpcMessage) => msg.toProtobufJSON(),
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

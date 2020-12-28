@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-enrollment',
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class EnrollmentComponent implements OnInit {
   selectedFile: File
 
-  constructor(private http : HttpClient ) { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }
