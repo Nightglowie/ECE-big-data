@@ -20,8 +20,10 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     BrowserAnimationsModule,
     MatButtonModule,
     RouterModule.forRoot([
-      {path: 'enroll', component: EnrollmentComponent},
-      {path: 'authen', component: AuthenticationComponent},
+      {path: 'menu', component: MenuComponent},
+      {path: 'enrollment', component: EnrollmentComponent},
+      {path: 'authentication', component: AuthenticationComponent},
+      {path: '', redirectTo: '/menu', pathMatch: 'full'},
     ]),
   ],
   providers: [],
