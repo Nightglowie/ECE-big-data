@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticateRequest, FaceCoordinates, FaceRequest, Point } from '../services/workflow.pb';
 import { AuthenticatorClient } from '../services/workflow.pbsc';
 import { MatInputModule } from '@angular/material/input';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-authentication',
@@ -15,14 +16,16 @@ export class AuthenticationComponent implements OnInit {
   authentified = false;
   notAuthentified = false;
   email: string;
+  imgUrl: SafeUrl;
 
-  constructor(private authentClient: AuthenticatorClient) { }
+  constructor(private authentClient: AuthenticatorClient, private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
   }
 
   onFileChanged(event) {
     this.selectedFile = event.target.files[0]
+    this.imgUrl = this._sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(event.target.files[0]))
   }
 
   sendBuffer(arrayBuffer: Uint8Array) {
@@ -72,15 +75,13 @@ export class AuthenticationComponent implements OnInit {
       this.invalidPicture = true;
       return;
     }
-    var reader = new FileReader();
-    reader.onloadend  = () => {
-      const arrayBuffer: ArrayBuffer = reader.result as ArrayBuffer;
-      const bytes = new Uint8Array(arrayBuffer);
-      console.log(arrayBuffer);
-      this.sendBuffer(bytes);
-
-    }
-    reader.readAsArrayBuffer(this.selectedFile);
+    this.selectedFile.arrayBuffer()
+      .then(buffer => {
+        this.sendBuffer(new Uint8Array(buffer));
+      })
+      .catch(res => {
+        console.log("Error loading file");
+      })
     }
   }
 

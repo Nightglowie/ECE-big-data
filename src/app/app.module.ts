@@ -13,20 +13,30 @@ import { GrpcWebClientModule } from '@ngx-grpc/grpc-web-client';
 import { GrpcMessage } from '@ngx-grpc/common';
 import { GrpcLoggerModule } from '@ngx-grpc/core';
 import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { HeaderComponent } from './navigation/header/header.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     EnrollmentComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    MatSidenavModule,
     HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
     RouterModule.forRoot([
       {path: 'menu', component: MenuComponent},
       {path: 'enrollment', component: EnrollmentComponent},
@@ -43,6 +53,13 @@ import { MatInputModule } from '@angular/material/input';
         responseMapper: (msg: GrpcMessage) => msg.toProtobufJSON(),
       },
     }),
+  ],
+  exports : [
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

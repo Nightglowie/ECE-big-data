@@ -62,3 +62,17 @@ p {
   font-size: 18px;
   color: rgb(27, 126, 76);
 }
+
+.picture {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  height: 200px;
+  line-height: 200px;
+}
+
+.myImage {
+  max-width: 400px;
+  max-height: 400px;
+}
+
