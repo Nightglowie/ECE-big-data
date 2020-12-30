@@ -12,6 +12,7 @@ import { GrpcCoreModule } from '@ngx-grpc/core';
 import { GrpcWebClientModule } from '@ngx-grpc/grpc-web-client';
 import { GrpcMessage } from '@ngx-grpc/common';
 import { GrpcLoggerModule } from '@ngx-grpc/core';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { GrpcLoggerModule } from '@ngx-grpc/core';
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatInputModule,
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'menu', component: MenuComponent},

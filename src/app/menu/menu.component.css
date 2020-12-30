@@ -4,6 +4,7 @@ p {
   margin: auto;
   height: 200px;
   line-height: 200px;
+  font-size: 43px;
 }
 
 div {
@@ -24,4 +25,5 @@ div {
   text-decoration:none;
   border: none;
   outline: none;
+  font-size: 43px;
 }

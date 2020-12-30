@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticateRequest, FaceCoordinates, FaceRequest } from '../services/workflow.pb';
+import { AuthenticateRequest, FaceCoordinates, FaceRequest, Point } from '../services/workflow.pb';
 import { AuthenticatorClient } from '../services/workflow.pbsc';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-authentication',
@@ -24,7 +25,17 @@ export class AuthenticationComponent implements OnInit {
     let authentRequest = new AuthenticateRequest({
       faceRequest: new FaceRequest({
         id: "Vin diesel",
-        face: arrayBuffer
+        face: arrayBuffer,
+        faceCoordinates: new FaceCoordinates({
+          topLeft : new Point({
+            y: "29",
+            x: "101"
+          }),
+          bottomRight : new Point({
+            y: "101",
+            x: "173"
+          })
+        })
       })
     });
 

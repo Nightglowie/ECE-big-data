@@ -4,6 +4,7 @@ p {
   margin: auto;
   height: 200px;
   line-height: 200px;
+  font-size: 43px;
 }
 
 div {
@@ -15,6 +16,7 @@ div {
 }
 
 ::ng-deep .mat-button{
+  font-size: 43px;
   padding: 0 6px 0 6px;
   margin: 6px 8px 6px 8px;
   min-width: 88px;
@@ -24,4 +26,17 @@ div {
   text-decoration:none;
   border: none;
   outline: none;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+  margin: auto;
+}
+
+.example-full-width {
+  width: 100%;
 }
