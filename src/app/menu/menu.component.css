@@ -7,7 +7,7 @@ p {
   font-size: 43px;
 }
 
-div {
+.class-button {
   width: 100%;
   text-align: center;
   margin: auto;
@@ -25,5 +25,5 @@ div {
   text-decoration:none;
   border: none;
   outline: none;
-  font-size: 43px;
+  font-size: 28px;
 }

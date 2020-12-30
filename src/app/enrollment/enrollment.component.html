@@ -2,17 +2,29 @@
 <form class="example-form">
   <mat-form-field class="example-full-width">
     <mat-label>E-mail</mat-label>
-    <textarea matInput placeholder="Ex. john.doe@mail.com"></textarea>
+    <textarea matInput placeholder="Ex. john.doe@mail.com" (input)="email = $event.target.value"></textarea>
   </mat-form-field>
 </form>
-<div>
+<div class="class-button">
   <input
   style="display: none"
   type="file" (change)="onFileChanged($event)"
   #fileInput>
-  <button mat-button color="primary" (click)="fileInput.click()">Select picture</button>
+  <button mat-button color="primary" (click)="fileInput.click()">Select image</button>
   <button mat-button color="primary" (click)="onUpload()">Upload!</button>
 </div>
-<div>
-  <img [src]="this.imgUrl">
+<div *ngIf="invalidAddress" class="class-message-address">
+  You must enter a valid e-mail address.
+</div>
+<div *ngIf="invalidPicture" class="class-message-picture">
+  You must have a valid image.
+</div>
+<div *ngIf="enrolled" class="class-message-enrolled">
+  You are enrolled!
+</div>
+<div *ngIf="notEnrolled" class="class-message-address">
+  Sorry, the enrollment did not work!
+</div>
+<div class="picture">
+  <img [src]="this.imgUrl" class="myImage">
 </div>

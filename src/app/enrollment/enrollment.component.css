@@ -7,7 +7,7 @@ p {
   font-size: 43px;
 }
 
-div {
+.class-button {
   width: 100%;
   text-align: center;
   margin: auto;
@@ -39,4 +39,38 @@ div {
 
 .example-full-width {
   width: 100%;
+}
+
+.class-message-address {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: rgb(209, 60, 60);
+}
+
+.class-message-picture {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: rgb(209, 60, 60);
+}
+
+.class-message-enrolled {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: rgb(27, 126, 76);
+}
+
+.picture {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  height: 200px;
+  line-height: 200px;
+}
+
+.myImage {
+  max-width: 400px;
+  max-height: 400px;
 }

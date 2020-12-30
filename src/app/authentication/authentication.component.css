@@ -7,7 +7,7 @@ p {
   font-size: 43px;
 }
 
-div {
+.class-button {
   width: 100%;
   text-align: center;
   margin: auto;
@@ -25,5 +25,40 @@ div {
   text-decoration:none;
   border: none;
   outline: none;
-  font-size: 43px;
+  font-size: 28px;
+}
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+  margin: auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.class-message-address {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: rgb(209, 60, 60);
+}
+
+.class-message-picture {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: rgb(209, 60, 60);
+}
+
+.class-message-authentified {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: rgb(27, 126, 76);
 }
