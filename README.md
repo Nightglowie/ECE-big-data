@@ -1,3 +1,12 @@
+Big Data Project - BOUTRY Guillaume and PAGES Sophie
+=================
+
+# Step by Step Enrollement
+
+
+# Authentication
+
+
 # ECEBigDataFrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
