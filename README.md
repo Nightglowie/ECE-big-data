@@ -2,7 +2,7 @@ Big Data Project - BOUTRY Guillaume and PAGES Sophie
 =================
 
 # Step by Step Enrollement
-![web1](/assets/web1.PNG)
+![web1](/src/assets/web1.PNG)
 
 # Authentication
 
