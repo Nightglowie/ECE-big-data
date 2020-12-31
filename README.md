@@ -10,7 +10,18 @@ Click on enroll.
 
 ![web2](/src/assets/web2.PNG)
 
+You must write an existing email address.
+
 ![web3](/src/assets/web3.PNG)
+
+Once you have selected your file, you can write a rectangle around the face.
+
+![web4](/src/assets/web4.PNG)
+
+You can then click on Upload!
+
+![web5](/src/assets/web5.PNG)
+
 
 # Authentication
 
