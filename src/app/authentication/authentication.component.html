@@ -1,0 +1,34 @@
+<p>Authentication</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>E-mail</mat-label>
+    <textarea matInput placeholder="Ex. john.doe@mail.com" (input)="email = $event.target.value"></textarea>
+  </mat-form-field>
+</form>
+<div class="class-button">
+  <input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+  <button mat-button color="primary" (click)="fileInput.click()">Select picture</button>
+  <button mat-button color="primary" (click)="onUpload()">Upload!</button>
+</div>
+<div *ngIf="authentified" class="class-message-authentified">
+  You are authentified!
+</div>
+<div *ngIf="notAuthentified" class="class-message-notAuthentified">
+  Sorry, we don't know you!
+</div>
+<div *ngIf="pictureShowed" class="class-message-rectangle">
+  Please write a rectangle around the face by clicking on the picture.
+</div>
+<div *ngIf="invalidAddress" class="class-message-address">
+  You must enter a valid e-mail address.
+</div>
+<div *ngIf="invalidPicture" class="class-message-picture">
+  You must have a valid image.
+</div>
+&nbsp;
+<div class="picture">
+<canvas #canvas class="myImage" [width]="this.imgWidth" [height]="this.imgHeight"></canvas>
+</div>
