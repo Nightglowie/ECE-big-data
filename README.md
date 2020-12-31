@@ -2,7 +2,13 @@ Big Data Project - BOUTRY Guillaume and PAGES Sophie
 =================
 
 # Step by Step Enrollement
+<hr />
+In the home page, you can either enroll and authenticate yourself.
+<hr />
 ![web1](/src/assets/web1.PNG)
+Click on enroll.
+![web2](/src/assets/web2.PNG)
+![web3](/src/assets/web3.PNG)
 
 # Authentication
 
