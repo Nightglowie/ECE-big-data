@@ -45,32 +45,48 @@ p {
   text-align: center;
   margin: auto;
   font-size: 18px;
-  color: rgb(209, 60, 60);
+  color: rgb(228, 44, 44);
+}
+
+.class-message-rectangle {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
 }
 
 .class-message-picture {
   text-align: center;
   margin: auto;
   font-size: 18px;
-  color: rgb(209, 60, 60);
+  color: rgb(228, 44, 44);
 }
 
 .class-message-enrolled {
   text-align: center;
   margin: auto;
-  font-size: 18px;
-  color: rgb(27, 126, 76);
+  font-size: 28px;
+  color:rgb(18, 168, 93);
+}
+
+.class-message-notEnrolled {
+  text-align: center;
+  margin: auto;
+  font-size: 28px;
+  color: rgb(228, 44, 44);
 }
 
 .picture {
   width: 100%;
   text-align: center;
   margin: auto;
-  height: 200px;
-  line-height: 200px;
 }
 
 .myImage {
+  width: 100%;
+  text-align: center;
+  margin: auto;
   max-width: 400px;
-  max-height: 400px;
+  max-height: 500px;
 }
+
+

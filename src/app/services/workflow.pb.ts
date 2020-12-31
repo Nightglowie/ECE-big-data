@@ -1073,6 +1073,8 @@ export class AuthenticateResponse implements GrpcMessage {
   static refineValues(_instance: AuthenticateResponse) {
     _instance.status = _instance.status || 0;
     _instance.message = _instance.message || '';
+    _instance.score = _instance.score || 0;
+    _instance.decision = _instance.decision || false;
   }
 
   /**
@@ -1093,6 +1095,12 @@ export class AuthenticateResponse implements GrpcMessage {
           break;
         case 2:
           _instance.message = _reader.readString();
+          break;
+        case 3:
+          _instance.score = _reader.readFloat();
+          break;
+        case 4:
+          _instance.decision = _reader.readBool();
           break;
         default:
           _reader.skipField();
@@ -1117,10 +1125,18 @@ export class AuthenticateResponse implements GrpcMessage {
     if (_instance.message) {
       _writer.writeString(2, _instance.message);
     }
+    if (_instance.score) {
+      _writer.writeFloat(3, _instance.score);
+    }
+    if (_instance.decision) {
+      _writer.writeBool(4, _instance.decision);
+    }
   }
 
   private _status?: AuthenticateStatus;
   private _message?: string;
+  private _score?: number;
+  private _decision?: boolean;
 
   /**
    * Message constructor. Initializes the properties and applies default Protobuf values if necessary
@@ -1130,6 +1146,8 @@ export class AuthenticateResponse implements GrpcMessage {
     _value = _value || {};
     this.status = _value.status;
     this.message = _value.message;
+    this.score = _value.score;
+    this.decision = _value.decision;
     AuthenticateResponse.refineValues(this);
   }
   get status(): AuthenticateStatus | undefined {
@@ -1143,6 +1161,18 @@ export class AuthenticateResponse implements GrpcMessage {
   }
   set message(value: string | undefined) {
     this._message = value;
+  }
+  get score(): number | undefined {
+    return this._score;
+  }
+  set score(value: number | undefined) {
+    this._score = value;
+  }
+  get decision(): boolean | undefined {
+    return this._decision;
+  }
+  set decision(value: boolean | undefined) {
+    this._decision = value;
   }
 
   /**
@@ -1161,7 +1191,9 @@ export class AuthenticateResponse implements GrpcMessage {
   toObject(): AuthenticateResponse.AsObject {
     return {
       status: this.status,
-      message: this.message
+      message: this.message,
+      score: this.score,
+      decision: this.decision
     };
   }
 
@@ -1183,7 +1215,9 @@ export class AuthenticateResponse implements GrpcMessage {
   ): AuthenticateResponse.AsProtobufJSON {
     return {
       status: AuthenticateStatus[this.status ?? 0],
-      message: this.message
+      message: this.message,
+      score: this.score,
+      decision: this.decision
     };
   }
 }
@@ -1194,6 +1228,8 @@ export module AuthenticateResponse {
   export interface AsObject {
     status?: AuthenticateStatus;
     message?: string;
+    score?: number;
+    decision?: boolean;
   }
 
   /**
@@ -1202,5 +1238,7 @@ export module AuthenticateResponse {
   export interface AsProtobufJSON {
     status?: string;
     message?: string;
+    score?: number;
+    decision?: boolean;
   }
 }

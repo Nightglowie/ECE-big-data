@@ -25,6 +25,7 @@
     "@ngx-grpc/core": "^2.0.3",
     "@ngx-grpc/grpc-web-client": "^2.0.3",
     "@ngx-grpc/well-known-types": "^2.0.3",
+    "canvas": "^2.6.1",
     "google-protobuf": "^3.14.0",
     "grpc": "^1.24.4",
     "grpc-web": "^1.2.1",

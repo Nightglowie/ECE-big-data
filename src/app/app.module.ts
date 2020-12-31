@@ -45,7 +45,7 @@ import { MatListModule } from '@angular/material/list';
     ]),
     GrpcCoreModule.forRoot(),
     GrpcWebClientModule.forRoot({
-      settings: { host: 'http://localhost:8080', withCredentials: false},
+      settings: { host: 'http://192.168.1.17:8080', withCredentials: false},
     }),
     GrpcLoggerModule.forRoot({
       settings: {
