@@ -25,8 +25,20 @@ You can then click on Upload!
 
 # Authentication
 
+If you are enrolled, you can try to authenticate yourself.
 
-# ECEBigDataFrontEnd
+![web6](/src/assets/web6.PNG)
+
+Well done!
+
+![web7](/src/assets/web7.PNG)
+
+If you use another picture you can see that it doesn't work.
+
+![web8](/src/assets/web8.PNG)
+
+
+# ECEBigDataFrontEnd - Informations
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
