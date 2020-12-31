@@ -113,8 +113,15 @@ export class AuthenticationComponent implements OnInit {
     this.authentClient.authenticate(authentRequest)
       .toPromise()
       .then(res => {
-        this.authentified = true;
-        this.notAuthentified = false;
+        if(res.decision) {
+          this.authentified = true;
+          this.notAuthentified = false;
+        }
+        else {
+          this.notAuthentified = true;
+          this.authentified = false;
+        }
+
         console.log(res)
       })
       .catch(res => {
