@@ -45,7 +45,7 @@ import { MatListModule } from '@angular/material/list';
     ]),
     GrpcCoreModule.forRoot(),
     GrpcWebClientModule.forRoot({
-      settings: { host: 'envoy.default.127.0.0.1.nip.io:80', withCredentials: false},
+      settings: { host: 'http://envoy.default.127.0.0.1.nip.io', withCredentials: false},
     }),
     GrpcLoggerModule.forRoot({
       settings: {

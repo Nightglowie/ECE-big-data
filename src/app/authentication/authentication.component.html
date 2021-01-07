@@ -13,10 +13,10 @@
   <button mat-button color="primary" (click)="fileInput.click()">Select picture</button>
   <button mat-button color="primary" (click)="onUpload()">Upload!</button>
 </div>
-<div *ngIf="authentified" class="class-message-authentified">
-  You are authentified!
+<div *ngIf="authenticated" class="class-message-authenticated">
+  You are authenticated!
 </div>
-<div *ngIf="notAuthentified" class="class-message-notAuthentified">
+<div *ngIf="notauthenticated" class="class-message-notauthenticated">
   Sorry, we don't know you!
 </div>
 <div *ngIf="pictureShowed" class="class-message-rectangle">

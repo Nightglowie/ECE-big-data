@@ -20,8 +20,8 @@ export class AuthenticationComponent implements OnInit {
   selectedFile: File;
   invalidAddress = false;
   invalidPicture = false;
-  authentified = false;
-  notAuthentified = false;
+  authenticated = false;
+  notauthenticated = false;
   email: string;
   imgUrl: SafeUrl;
   pictureShowed = false;
@@ -114,20 +114,20 @@ export class AuthenticationComponent implements OnInit {
       .toPromise()
       .then(res => {
         if(res.decision) {
-          this.authentified = true;
-          this.notAuthentified = false;
+          this.authenticated = true;
+          this.notauthenticated = false;
         }
         else {
-          this.notAuthentified = true;
-          this.authentified = false;
+          this.notauthenticated = true;
+          this.authenticated = false;
         }
 
         console.log(res)
       })
       .catch(res => {
         console.log("not working")
-        this.notAuthentified = true;
-        this.authentified = false;
+        this.notauthenticated = true;
+        this.authenticated = false;
         console.log(res);
 
       });
@@ -137,7 +137,7 @@ export class AuthenticationComponent implements OnInit {
     this.pictureShowed = false;
     this.invalidAddress = false;
     this.invalidPicture = false;
-    this.notAuthentified = false;
+    this.notauthenticated = false;
     if(this.email == undefined) {
       this.invalidAddress = true;
     }

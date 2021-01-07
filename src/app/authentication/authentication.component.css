@@ -61,14 +61,14 @@ p {
   color: rgb(228, 44, 44);
 }
 
-.class-message-authentified {
+.class-message-authenticated {
   text-align: center;
   margin: auto;
   font-size: 28px;
   color: rgb(18, 168, 93);
 }
 
-.class-message-notAuthentified {
+.class-message-notauthenticated {
   text-align: center;
   margin: auto;
   font-size: 28px;
